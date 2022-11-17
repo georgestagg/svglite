@@ -18,9 +18,13 @@ alias_lookup <- function() {
   )
 }
 
-#' @importFrom systemfonts font_info
 match_family <- function(font, bold = FALSE, italic = FALSE) {
-  font_info(font, bold = bold, italic = italic)$family[1]
+  fonts = c(sans = "Helvetica", serif = "Times", mono = "Courier", symbol = "Symbol")
+  if (font %in% r_font_families) {
+    return(fonts[[font]])
+  } else {
+    return('Helvetica')
+  }
 }
 
 validate_aliases <- function(system_fonts, user_fonts) {

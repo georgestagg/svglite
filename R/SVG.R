@@ -74,7 +74,6 @@
 #'
 #' @keywords device
 #' @useDynLib svglite, .registration = TRUE
-#' @importFrom systemfonts match_font
 #' @export
 svglite <- function(filename = "Rplot%03d.svg", width = 10, height = 8,
                     bg = "white", pointsize = 12, standalone = TRUE,
